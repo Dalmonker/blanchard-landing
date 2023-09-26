@@ -1,0 +1,96 @@
+
+.choices {
+    line-height: 1;
+    &__inner {
+        position: relative;
+        padding: 12px 15px;
+        background-color: transparent;
+        border: 1px solid var(--white);
+        border-radius: 6px;
+        font-size: 16px;
+        min-height: 0;
+        z-index: 10;
+    }
+
+    &__list {
+        padding: 0;
+    }
+}
+
+.is-focused .choices__inner, .is-open .choices__inner {
+    border-color: var(--white);
+    background-color: var(--white-transparent-2);
+}
+
+.is-open .choices__inner {
+    border-radius: 6px;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 12px;
+}
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+    background-color: transparent;
+    border: 1px solid var(--middle-gray);
+    border-radius: 6px;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+    position: relative;
+    padding: 12px 15px;
+    font-size: inherit;
+    color: var(--middle-gray);
+}
+
+.choices__list--dropdown .choices__item.is-selected {
+    display: none;
+}
+
+.choices__list--dropdown .choices__item:not(:last-child) {
+    border-bottom: 1px solid;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+    background-color: var(--white-transparent-2);
+
+}
+
+.choices[data-type*=select-one] .choices__inner::after {
+    content: "";
+    height: 8px;
+    width: 8px;
+    position: absolute;
+    border-right: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    right: 14px;
+    top: 50%;
+    margin-top: -4px;
+    pointer-events: none;
+    transform: rotate(45deg);
+    transition: transform var(--short);
+    transform-origin: center;
+    z-index: 1;
+}
+
+.choices[data-type*=select-one].is-open .choices__inner::after {
+    transform: rotate(225deg);
+    z-index: 2;
+}
+
+@media (max-width: 970px) {
+    .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+        background-color: var(--dark);
+    }
+    
+    .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+        background-color: var(--dark-light);
+    }
+}
+
+
+@media (min-width: 610px) {
+    .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+        padding-right: 40px;
+    }
+}

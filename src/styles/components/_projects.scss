@@ -1,0 +1,19 @@
+.slider-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--dark);
+}
+
+.projects {
+    padding-bottom: 80px;
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    .text {
+        margin-bottom: -4px;
+    }
+    
+}

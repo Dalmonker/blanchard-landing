@@ -1,0 +1,104 @@
+.top-wrapper {
+    position: relative;
+    background-color: var(--background-helper);
+    overflow: hidden;
+
+    &__header,
+    &__hero {
+        position: relative;
+    }
+
+    &__header {
+        z-index: 3;
+    }
+
+    &__hero {
+        z-index: 2;
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        animation-name: resize;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    &__slide {
+        background-size: cover;
+        background-position: center top;
+    }
+    
+    &__slide--1 {
+        background-image: url('/public/img/hero-back-1-desk.jpg');
+    }
+
+    &__slide--2 {
+        background-image: url('/public/img/hero-back-2-desk.jpg');
+    }
+
+    &__slide--3 {
+        background-image: url('/public/img/hero-back-3-desk.jpg');
+    }
+}
+
+@media (max-width: 1280px) {
+    .top-wrapper {
+
+    &__slide--1 {
+        background-image: url('/public/img/hero-back-1-1024.jpg');
+    }
+
+    &__slide--2 {
+        background-image: url('/public/img/hero-back-2-1024.jpg');
+    }
+
+    &__slide--3 {
+        background-image: url('/public/img/hero-back-3-1024.jpg');
+    }
+}
+
+}
+
+@media (max-width: 970px) {
+    .top-wrapper {
+
+    &__slide--1 {
+        background-image: url('/public/img/hero-back-1-768.jpg');
+    }
+
+    &__slide--2 {
+        background-image: url('/public/img/hero-back-2-768.jpg');
+    }
+
+    &__slide--3 {
+        background-image: url('/public/img/hero-back-3-768.jpg');
+    }
+}
+
+}
+
+@media (max-width: 420px) {
+    .top-wrapper {
+
+    &__slide--1 {
+        background-image: url('/public/img/hero-back-1-320.jpg');
+    }
+
+    &__slide--2 {
+        background-image: url('/public/img/hero-back-2-320.jpg');
+    }
+
+    &__slide--3 {
+        background-image: url('/public/img/hero-back-3-320.jpg');
+    }
+}
+
+}
+
+
+

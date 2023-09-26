@@ -1,0 +1,114 @@
+
+
+
+
+.events-slider {
+
+    position: relative;
+
+    &__pagination {
+        display: none;
+    }
+
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__slide {
+        display: flex;              // 1
+        flex-direction: column;     // 2
+        box-sizing: border-box;     // 3
+        height: auto;               // 4
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__slide-content {
+        display: flex;              // 1
+        flex-direction: column;     // 2
+        align-items: flex-start;    // 3
+        flex-grow: 1;               // 4
+        min-height: 400px;
+        padding: 13px 50px 50px;
+        border: 1px solid var(--light-middle-gray);
+        border-top: none;
+        // height: 100%;
+    }
+
+
+    &__info {
+        margin-bottom: 12px;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 600;
+        color: var(--middle-gray);
+    }
+
+    &__info-text {
+        display: block;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 9px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        // max-width: 420px;
+    }
+
+    &__link {
+        margin-top: auto;
+        // margin-top: 80px;
+    }
+
+    &__nav-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 12;
+        transition: opacity var(--short);
+        // transform: translateY(-50%);
+    }
+
+    &__nav-btn--prev {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &__nav-btn--next {
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+
+    &__nav-btn.nav-btn--disabled {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .events-slider {
+
+        --swiper-pagination-bullet-width: 10px;
+        --swiper-pagination-bullet-height: 10px;
+        --swiper-pagination-color: #666;
+        --swiper-pagination-bullet-horizontal-gap: 8px;
+
+        padding-bottom: 40px;
+
+        &__nav-btn {
+            display: none;
+        }
+
+        &__pagination {
+            bottom: 0;
+            display: block;
+            height: auto;
+            line-height: 1;
+            // transform:  translateY(30px);
+        }
+    }
+}
+

@@ -1,0 +1,240 @@
+
+.gallery {
+    padding-top: 80px;
+    padding-bottom: 79px;
+    background-color: var(--dark);
+    color: var(--white);
+    background-image: url('/public/img/gallery-background-1920.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__content-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__left,
+    &__last {
+      width: calc(400 / 1600 * 100%);
+    }
+    
+    &__last {
+      position: relative;
+    }
+    
+    &__last-content {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -8px;
+    }
+    
+    &__slider {
+      width: calc(1150 / 1600 * 100%);
+      margin-right: 0;
+      padding-top: 18px;
+    }
+    
+    &__slides-container {
+      overflow: hidden;
+    }
+    
+    &__nav {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 28px;
+      padding-left: 3px;
+    }
+    
+    &__pagination {
+      margin-right: 8px;
+      text-align: center;
+    }
+
+    &__prev {
+      margin-right: 20px;
+    }
+    
+    &__next::before {
+      left: calc(50% - 7px / 2);
+      border-top: 1px solid var(--white);
+      border-right: 1px solid var(--white);
+    }
+    
+    &__prev::before {
+      left: calc(50% - 7px / 2);
+      border-left: 1px solid var(--white);
+      border-bottom: 1px solid var(--white);
+    }
+    
+    &__slide {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--background-helper);
+    }
+    
+    &__slide::before {
+      content: "";
+      position: relative;
+      z-index: 1;
+      display: block;
+      padding-top: calc(100% - 6px);
+      border: 3px solid transparent;
+      box-sizing: border-box;
+      transition: background-color .3s ease, border-color .3s ease;
+    }
+    
+    &__slide::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 25px;
+      box-sizing: border-box;
+      opacity: 0;
+      background-color: var(--transparent-dark-5);
+      background-image: url('/public/img/gallery-loup.svg');
+      background-repeat: no-repeat;
+      background-size: 80px;
+      background-position: center top 46%;
+      background-clip: content-box;
+      transition: opacity .5s ease;
+    }
+    
+    &__slide:hover::after {
+      opacity: 1;
+    }
+    
+    &__slide:focus {
+      outline: none;
+    }
+    
+    &__slide:focus::before {
+      border-color: var(--violet-dark)
+    }
+    
+    &__slide:active::before {
+      border-color: var(--violet-ultra-light);
+      background-color: var(--transparent-rose);
+    }
+    
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+
+
+
+
+
+    &__filter-title {
+      margin-top: -1px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: 600;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .gallery {
+
+      &__left,
+      &__last {
+        width: calc(280 / 924 * 100%);
+      }
+
+      &__slider {
+        width: calc(594 / 924 * 100%);
+      }
+    }
+  }
+  
+  @media (max-width: 970px) {
+    .gallery {
+
+      padding-bottom: 81px;
+
+      &__left {
+        position: relative;
+        z-index: 20;
+      }
+
+      &__left,
+      &__slider {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      &__slider {
+        padding-top: 21px;
+      }
+
+      &__filter {
+        max-width: 280px;
+      }
+
+      &__last {
+        width: 100%;
+        top: 11px;
+      }
+      
+      &__last-content {
+        position: static;
+      }
+  
+      &__slide::before {
+        padding-top: calc(280 / 317 * 100% - 6px);
+      }
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .gallery {
+      padding-top: 50px;
+      padding-bottom: 51px;
+      &__slider {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 5px;
+      }
+
+      &__filter {
+        max-width: 100%;
+      }
+
+      &__filter-title {
+         margin-bottom: 4px;
+      }
+      
+      &__nav {
+        align-self: center;
+        margin-bottom: 0;
+      }
+
+      &__slides-container {
+        margin-bottom: 20px;
+      }
+      
+      &__slide::before {
+        padding-top: calc(367 / 290 * 100% - 6px);
+      }
+
+      &__last-content .text {
+        font-size: 16px;
+        line-height: 32px;
+      }
+    }
+  }

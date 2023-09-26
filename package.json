@@ -1,0 +1,25 @@
+{
+  "name": "blanchard",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": ".",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ],
+  "devDependencies": {
+    "sass": "^1.63.6",
+    "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "choices.js": "^10.2.0",
+    "normalize.css": "^8.0.1",
+    "swiper": "^10.0.4"
+  }
+}
