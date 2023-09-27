@@ -1266,34 +1266,40 @@
   </section>
 
   <section class="contacts">
-    <div class="container contacts__container">
-      <h2 class="contacts__title section-title">Контакты</h1>
         <div class="contacts__row">
           <div class="contacts__top">
+            <div class="container contacts__container">
+              <div class="contacts__street">
+                  <h3 class="contacts__street-number">Шоурум №2</h3>
+                  <div class="contacts__street-home">Леонтьевский переулок, дом 5/1</div>              
+              </div>
 
-            <div class="contacts__street">
-                <h3 class="contacts__street-number">Шоурум №2</h3>
-                <div class="contacts__street-home">Леонтьевский переулок, дом 5/1</div>              
+              <form class="contacts-form" action="">
+                <input placeholder="Имя*" class="contacts-form__input contacts-form__input--name" type="text">
+                <input placeholder="Телефон*" class="contacts-form__input contacts-form__input--phone" type="text">
+                <button class="contacts-form__input contacts-form__input--btn">Заказать обратный звонок</button>
+              </form>
+
+              <div class="contacts__message">
+                <div class="contacts-descr">Связаться в один клик</div>
+
+              </div>
             </div>
-
-            <form class="contacts-form" action="">
-              <input placeholder="Имя*" class="contacts-form__input contacts-form__input--name" type="text">
-              <input placeholder="Телефон*" class="contacts-form__input contacts-form__input--phone" type="text">
-              <button class="contacts-form__input contacts-form__input--btn">Заказать обратный звонок</button>
-            </form>
-
-            <div class="contacts__message">
-              <div class="contacts-descr">Связаться в один клик</div>
-
-            </div>
-
           </div>
             <div class="contacts__bottom">
               <div id="map" class="contacts__map"></div>
             </div>
         </div>
-    </div>
   </section>
+
+  <footer class="footer">
+    <div class="container">
+      <a class="footer__logo logo">
+        <img src="./public/img/blanchard-logo.svg" alt="Логотип Blanchard" class="logo__image" width="97"
+          height="22">
+      </a>
+    </div>
+  </footer>
 
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"></script>
   <script type="module" src="/main.js"></script>
