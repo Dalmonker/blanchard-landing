@@ -4,19 +4,20 @@
   &__row {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__top {
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 38px;
+    border-top: 1px solid var(--light-middle-gray);
+    border-bottom: 1px solid var(--light-middle-gray);
   }
 
   &__container {
     display: flex;
-  }
-
-  &__top {
-    padding-top: 45px;
-    padding-bottom: 38px;
-    display: flex;
     justify-content: space-between;
-    border-top: 1px solid var(--light-middle-gray);
-    border-bottom: 1px solid var(--light-middle-gray);
   }
 
   &__street {
@@ -98,6 +99,29 @@
   font-size: 24px;
   line-height: 32px;
   color: var(--dark);
-  margin-right: 6px;
   text-wrap: nowrap;
+}
+
+@media (max-width: 1650px) {
+  .contacts {
+    &-form {
+      margin-right: 30px;
+
+      &__input--name {
+        margin-right: 20px;
+      }
+    }
+
+    &__street {
+      margin-right: 40px;
+    }
+  }
+}
+
+@media (max-width: 1530px) {
+  .contacts {
+    &__container {
+      flex-direction: column;
+    }
+  }
 }

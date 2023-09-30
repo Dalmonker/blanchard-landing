@@ -1,5 +1,32 @@
 .footer {
-  &__logo {
+  min-height: 140px;
+  background-color: var(--black);
+  &__logo img {
     width: 173px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+  }
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover {
+      svg path {
+        fill: var(--white);
+        stroke: var(--black);
+      }
+    }
+
+    &:active {
+      svg path {
+        fill: var(--violet-middle);
+      }
+    }
   }
 }
