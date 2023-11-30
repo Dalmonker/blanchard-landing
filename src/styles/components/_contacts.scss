@@ -3,8 +3,6 @@
 }
 
 .contacts {
-  padding-top: 123px;
-
   &__row {
     display: flex;
     flex-direction: column;
@@ -65,13 +63,13 @@
   &__input--phone {
     border: 1px solid var(--dark);
     border-radius: 100px;
-    padding: 9px 43px 9px 24px;
+    padding: 9px 57px 9px 24px;
     font-size: 16px;
     line-height: 32px;
   }
 
   &__input--name {
-    margin-right: 44px;
+    margin-right: 17px;
   }
 
   &__input--phone {
