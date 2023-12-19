@@ -27,8 +27,17 @@
   background-color: var(--light-gray);
 }
 
-.nav-btn--light::before {
-  border-color: var(--black);
+.nav-btn--light:hover:not(.nav-btn--disabled) {
+  background-color: var(--violet-ultra-light);
+}
+
+.nav-btn--light:focus {
+  box-shadow: inset 0 0 0 2px var(--violet-middle);
+}
+
+.nav-btn--light:active {
+  background-color: var(--violet-ultra-light);
+  box-shadow: inset 0 0 0 2px var(--violet-middle);
 }
 
 .nav-btn--disabled {

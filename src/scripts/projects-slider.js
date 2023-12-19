@@ -25,18 +25,17 @@ const projectsSlider = new Swiper(".js-projects-slider", {
     },
 
     breakpoints : {
-
-        441: {
+        611: {
             slidesPerView: 2,
             spaceBetween: 34
         },
 
-        1024: {
+        971: {
             slidesPerView: 2,
             spaceBetween: 50
         },
 
-        1025: {
+        1281: {
             slidesPerView: 3,
             spaceBetween: 50
         }
