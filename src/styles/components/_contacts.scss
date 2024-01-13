@@ -20,10 +20,13 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__street {
+    width: calc(224 / 1600 * 100%);
     margin-right: 80px;
+    white-space: nowrap;
   }
 
   &__street-number {
@@ -41,6 +44,47 @@
     text-wrap: nowrap;
   }
 
+  &-descr {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 32px;
+    color: var(--dark);
+  }
+
+  &__message {
+    width: calc(275 / 1600 * 100%);
+  }
+
+  &__networks {
+    margin-top: 6px;
+    width: 105px;
+  }
+
+  &__network:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__wats svg:hover path {
+    fill: rgba(48, 191, 57, 0.5);
+    transition: var(--short);
+  }
+
+  &__wats svg:hover .white-text {
+    transition: var(--short);
+    fill: #fff;
+  }
+
+  &__telegram svg:hover path {
+    fill: rgba(38, 165, 228, 0.5);
+    transition: var(--short);
+  }
+
+  &__telegram svg:hover .white-text {
+    transition: var(--short);
+    fill: #fff;
+  }
+
   &__map {
     width: 100%;
     min-height: 700px;
@@ -52,6 +96,7 @@
   display: flex;
   align-items: center;
   margin-right: 80px;
+  width: calc(909 / 1600 * 100%);
 
   &__input {
     max-width: 270px;
@@ -66,6 +111,9 @@
     padding: 9px 57px 9px 24px;
     font-size: 16px;
     line-height: 32px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__input--name {
@@ -87,37 +135,26 @@
     border-radius: 100px;
     padding: 12.5px 32px;
     text-wrap: nowrap;
-  }
-}
 
-.contacts-descr {
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 32px;
-  color: var(--dark);
-  text-wrap: nowrap;
-}
-
-@media (max-width: 1650px) {
-  .contacts {
-    &-form {
-      margin-bottom: 30px;
-
-      &__input--name {
-        margin-right: 20px;
-      }
+    &:hover {
+      cursor: pointer;
     }
 
-    &__street {
-      margin-right: 40px;
+    &:active {
+      color: #fff;
     }
   }
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1564px) {
   .contacts {
     &__container {
       flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__message {
+      margin-top: 30px;
     }
   }
 }
@@ -126,7 +163,7 @@
   .contacts {
     &-form {
       flex-wrap: wrap;
-      margin-right: 0;
+      width: 100%;
       &__input {
         width: 50%;
         max-width: 323px;

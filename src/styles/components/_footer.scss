@@ -1,6 +1,7 @@
 .footer {
   min-height: 140px;
   background-color: var(--black);
+  padding: 50px 0;
   &__logo img {
     width: 173px;
   }
@@ -8,7 +9,6 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0;
   }
 
   &__link {
@@ -16,17 +16,22 @@
       margin-right: 20px;
     }
 
-    &:hover {
-      svg path {
-        fill: var(--white);
-        stroke: var(--black);
-      }
+    svg:hover path {
+      fill: #fff;
+      transition: var(--short);
     }
+  }
+}
 
-    &:active {
-      svg path {
-        fill: var(--violet-middle);
-      }
+@media (max-width: 420px) {
+  .footer {
+    &__items {
+      margin-bottom: 20px;
+    }
+    &__container {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
