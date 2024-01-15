@@ -20,6 +20,11 @@
       fill: #fff;
       transition: var(--short);
     }
+
+    svg:active path {
+      fill: var(--violet-middle);
+      transition: var(--short);
+    }
   }
 }
 

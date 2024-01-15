@@ -114,6 +114,9 @@
     &:hover {
       cursor: pointer;
     }
+    &:focus {
+      background-color: var(--light-white-gray);
+    }
   }
 
   &__input--name {
@@ -126,7 +129,7 @@
 
   &__input--btn {
     max-width: 329px;
-    border: 2px solid var(--violet-middle);
+    border: 1px solid var(--violet-middle);
     color: var(--violet-middle);
     text-align: center;
     font-weight: 700;
@@ -144,6 +147,18 @@
       color: #fff;
     }
   }
+}
+
+#validationForm {
+  position: relative;
+}
+
+.error {
+  position: absolute;
+  font-size: 13px;
+  color: red;
+  top: -3px;
+  right: 69%;
 }
 
 @media (max-width: 1564px) {
