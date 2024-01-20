@@ -161,6 +161,104 @@
   right: 69%;
 }
 
+.contacts__map {
+  position: relative;
+  min-height: 300px;
+  width: calc(
+    1078 / 1600 * 100% + ((100vw - 100%) / 2)
+  ); /* 1078 - в данном случае это ширина карты внутри контейнера, её можно менять */
+  margin-right: calc((-100vw + 100%) / 2);
+  margin-top: -1px;
+  transition-property: width, height, padding;
+  transition-duration: 100ms;
+}
+
+.contacts__map-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.page-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  background-color: #0e294b;
+}
+
+.page-footer__text {
+  text-align: center;
+}
+
+.contacts__top-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .contacts__contacts {
+    width: calc(437 / 924 * 100%);
+  }
+
+  .contacts__map {
+    width: calc(487 / 924 * 100% + ((100vw - 100%) / 2));
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts__contacts {
+    width: calc(380 / 668 * 100%);
+  }
+
+  .contacts__map {
+    width: calc(288 / 668 * 100% + ((100vw - 100%) / 2));
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contacts__container {
+    flex-direction: column;
+  }
+
+  .contacts__wrap,
+  .contacts__contacts {
+    border: none;
+  }
+
+  .contacts__contacts {
+    order: 1;
+  }
+
+  .contacts__subtitle--desktop {
+    display: none;
+  }
+
+  .contacts__top-mobile {
+    display: block;
+  }
+
+  .contacts__contacts,
+  .contacts__map {
+    width: calc(100% + 30px);
+  }
+
+  .contacts__map {
+    height: 320px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
 @media (max-width: 1564px) {
   .contacts {
     &__container {

@@ -55,10 +55,6 @@
       transition: transform var(--short);
     }
 
-    &::after {
-      transform: scaleX(1);
-    }
-
     &:focus {
       color: var(--white);
     }
