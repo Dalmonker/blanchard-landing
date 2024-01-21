@@ -57,7 +57,7 @@
 
 @media (max-width: 610px) {
   .hero {
-    padding-top: 30px;
+    padding-top: 38px;
     padding-bottom: 45px;
 
     &__content {
@@ -74,6 +74,8 @@
     &__title {
       font-size: 32px;
       line-height: 39px;
+      margin-bottom: 10px;
+      max-width: 265px;
     }
 
     &__text {
@@ -84,7 +86,7 @@
     }
 
     &__text:last-of-type {
-      margin-bottom: 42px;
+      margin-bottom: 41px;
     }
 
     &__btn {

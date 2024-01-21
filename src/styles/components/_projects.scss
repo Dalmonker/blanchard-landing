@@ -1,19 +1,47 @@
 .slider-title {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    color: var(--dark);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--dark);
 }
 
 .projects {
-    padding-bottom: 80px;
+  padding-bottom: 80px;
 
-    &__title {
-        margin-bottom: 15px;
-    }
+  &__title {
+    margin-bottom: 15px;
+  }
 
-    .text {
-        margin-bottom: -4px;
-    }
-    
+  .text {
+    margin-bottom: -4px;
+  }
+}
+
+@media (max-width: 970px) {
+  .projects .text {
+    margin-bottom: 0;
+  }
+  .projects {
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 420px) {
+  .events {
+    padding-bottom: 40px;
+  }
+
+  .projects {
+    padding-bottom: 39px;
+  }
+
+  .projects .text {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .slider-title {
+    font-size: 18px;
+    margin-top: 83px;
+  }
 }

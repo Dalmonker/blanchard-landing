@@ -12,6 +12,27 @@
   color: var(--violet-light);
 }
 
+.link-projects {
+  color: var(--violet-light);
+  transition: color var(--short);
+}
+
+.link-projects::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: currentColor;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform var(--short);
+}
+.link-projects:focus {
+  color: var(--white);
+}
+
 .link {
   &::before {
     content: "";

@@ -260,3 +260,45 @@
     }
   }
 }
+
+@media (max-width: 420px) {
+  .contacts {
+    &__top {
+      padding-top: 0;
+      padding-bottom: 9px;
+      border-top: none;
+    }
+    &__street-number {
+      font-size: 18px;
+    }
+    &-form {
+      margin-top: 7px;
+      &__input--name,
+      &__input--phone {
+        padding: 5px 59px 2px 22px;
+      }
+      &__input--btn {
+        margin-top: 18px;
+        padding: 7px 30px 7px 22px;
+      }
+    }
+    &__message {
+      margin-top: 20px;
+    }
+    &-descr {
+      font-size: 18px;
+    }
+    &__networks {
+      width: 160px;
+    }
+    &__networks svg {
+      width: 50px;
+    }
+    &__top-mobile {
+      display: block;
+    }
+    &__map {
+      min-height: 320px;
+    }
+  }
+}

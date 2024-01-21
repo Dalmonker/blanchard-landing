@@ -105,9 +105,9 @@
       // transform:  translateY(30px);
     }
 
-    &__slide-content {
-      padding: 13px 33px 5px;
-    }
+    // &__slide-content {
+    //   padding: 13px 33px 5px;
+    // }
 
     &__info {
       margin-bottom: 3px;
@@ -122,10 +122,18 @@
   }
 }
 
+@media (max-width: 970px) {
+  .events-slider {
+    &__slide-content {
+      padding: 13px 33px 38px;
+    }
+  }
+}
+
 @media (max-width: 610px) {
   .events-slider {
     &__slide-content {
-      padding: 18px 22px 30px;
+      padding: 18px 22px 84px;
     }
 
     &__info {

@@ -268,7 +268,7 @@
       align-items: flex-start;
       overflow-y: auto;
       flex-wrap: nowrap;
-      margin-bottom: 55px;
+      margin-bottom: 170px;
       font-size: 24px;
       line-height: 64px;
     }
@@ -413,9 +413,6 @@
     &__nav {
       padding-left: 15px;
     }
-    &__menu {
-      font-size: 40px;
-    }
     &__account {
       font-size: 12px;
       line-height: 16px;
@@ -427,5 +424,28 @@
       height: 9px;
       transform: translateX(-3px);
     }
+  }
+}
+
+@media (max-width: 420px) {
+  .burger {
+    width: 15px;
+    height: 15px;
+  }
+
+  .header__nav-link {
+    font-size: 14px;
+  }
+
+  .header__nav {
+    padding-top: 41px;
+  }
+
+  .header__menu {
+    line-height: 32px;
+  }
+
+  .header__account {
+    position: absolute;
   }
 }
