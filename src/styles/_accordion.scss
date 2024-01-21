@@ -185,6 +185,12 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .accordion__inner-list {
+    column-count: 2;
+  }
+}
+
 @media (max-width: 970px) {
   .accordion__heading {
     width: 100%;

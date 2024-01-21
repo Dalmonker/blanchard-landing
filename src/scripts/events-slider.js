@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 
 const eventsSlider = new Swiper(".js-events-slider", {
   modules: [Navigation, Pagination],
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 20,
   grid: {
     rows: 1,
@@ -25,10 +25,6 @@ const eventsSlider = new Swiper(".js-events-slider", {
   },
 
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
-
     611: {
       slidesPerView: 2,
       spaceBetween: 34,
