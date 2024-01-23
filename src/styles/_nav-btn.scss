@@ -49,12 +49,8 @@
   background-color: var(--light-gray);
 }
 
-// .nav-btn:hover:not(.nav-btn--disabled-gallery) {
-//   background-color: var(--dark-gray-05);
-// }
-
-.nav-btn:hover:not(.nav-btn--disabled) {
-  background-color: var(--violet-ultra-light);
+.nav-btn:hover:not(.nav-btn--disabled-gallery) {
+  background-color: var(--dark-gray-05);
 }
 
 .nav-btn::before {
@@ -67,7 +63,7 @@
   transform-origin: center;
 }
 
-.nav-btn--galerry {
+.gallery__nav-button {
   position: relative;
   flex-shrink: 0;
   width: 30px;
@@ -79,7 +75,7 @@
   transition: background-color var(--short), box-shadow var(--short);
 }
 
-.nav-btn--galerry::before {
+.gallery__nav-button::before {
   content: "";
   position: absolute;
   top: calc(50% - 7px / 2);
@@ -89,20 +85,24 @@
   transform-origin: center;
 }
 
-.nav-btn--galerry:hover:not(.nav-btn--disabled-gallery) {
+.nav-btn--disabled-gallery {
+  background-color: var(--dark-gray-05);
+}
+
+.gallery__nav-button:hover:not(.nav-btn--disabled-gallery) {
   background-color: var(--violet-middle);
 }
 
-.nav-btn--galerry:active:not(.nav-btn--disabled-gallery) {
+.gallery__nav-button:active:not(.nav-btn--disabled-gallery) {
   background-color: var(--violet-dark);
 }
 
-.nav-btn--galerry:focus {
+.gallery__nav-button:focus {
   outline: none;
   box-shadow: inset 0 0 0 2px var(--black);
 }
 
-.nav-btn--galerry:active {
+.gallery__nav-button:active:not(.nav-btn--disabled-gallery) {
   background-color: var(--violet-dark);
 }
 
